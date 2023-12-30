@@ -319,7 +319,7 @@ border-bottom: 1px grey solid;
 .footer-main {
   display: flex;
   flex-direction: row;
-  gap: 0.6rem;
+  gap: 0.3rem;
   justify-content: space-between;
   border-bottom: grey 1px solid;
   padding-bottom: 1rem;
