@@ -1,21 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLinkedinIn, FaFacebookF, FaGithub, FaEnvelope } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6"
 import { Link } from "react-router-dom";
 // import Logo from '../../public/gabriellogo.png'
 
 export default function Footer (){
+    const [subscriber, setSubscriber] = useState({firstname: "", lastname: "", email: ""})
+
+    const handleSubscriberForm = (e)=>{
+        const { name, value } = e.target
+
+        setSubscriber(prevValue => (
+            {
+            ...prevValue, [name]: value
+        })
+        )
+        console.log(subscriber)
+    }
+
+    const handleSubscriberSubmit = (e)=>{
+        e.preventDefault()
+        console.log(subscriber)
+    }
+
+   
+
     return (
         <div className="footer">
             <div className="footer-top">
                 <div className="subscription">
-                    <h1>Join for monthly insights</h1>
-                    <form className="subscription-form">
-                        <input type="text" className="form-input" placeholder="FIRST NAME"/>
-                        <input type="text" className="form-input" placeholder="LAST NAME"/>
-                        <input type="email" className="form-input" placeholder="EMAIL"/>
-                    </form>
+                    <h1>Join for daily insights</h1>
+                    <form onSubmit={handleSubscriberSubmit} className="subscription-form">
+                        <input type="text" name="firstname" 
+                        value={subscriber.firstname} 
+                        placeholder="FIRST NAME" 
+                        onChange={handleSubscriberForm} 
+                        className="form-input"/>
+
+                        <input type="text" name="lastname" 
+                        value={subscriber.lastname} 
+                        placeholder="LAST NAME" 
+                        onChange={handleSubscriberForm} 
+                        className="form-input"/>
+
+                        <input type="email" name="email" 
+                        value={subscriber.email} 
+                        placeholder="EMAIL" 
+                        onChange={handleSubscriberForm} 
+                        className="form-input"/>
+                    
                     <button className="subscribe-btn">Subscribe</button>
+
+                    </form>
                     <p>We will never share or spam your email address. By clicking "Sign Up" you agree to the Terms of Use and Privacy Policy</p>
                 </div>
                     <div className="footer-main">
