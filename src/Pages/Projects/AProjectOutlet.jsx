@@ -22,7 +22,7 @@ export default function AProjectOutlet() {
         <div>
             <div className="project-outlet top-outlet">
                 {menuItems.map((item, index) => {
-                    return <Link onClick={() => setCurrentIndex(index + 1)} className={currentIndex === index + 1 ? "select-active" : null} key={item.link} to={item.link}>{item.name}</Link>
+                    return <Link  onClick={() => setCurrentIndex(index + 1)} className={currentIndex === index + 1 ? "select-active" : null} key={item.link} to={item.link}>{item.name}</Link>
                 })}
             </div>
             <Outlet />
