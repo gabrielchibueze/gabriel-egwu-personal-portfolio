@@ -9,7 +9,7 @@ import Logo from '/gabriellogo.png'
 
 export default function Header() {
     const [mobileMode, setMobileMode] = useState(null);
-    const [miniDesktop, setMiniDesktop] = useState(false)
+    const [miniDesktop, setMiniDesktop] = useState(null)
     const [desktopView, setDesktopView] = useState(null);
     const [menuClick, setMenuClick] = useState(false)
     const [projectHover, setProjectHover] = useState(false)
@@ -23,10 +23,13 @@ export default function Header() {
             }
             if (window.outerWidth >= 500 && window.outerWidth <= 1000) {
                 setMobileMode(false)
+                setMobileMode(false)
                 setMiniDesktop(true)
             }
             if (window.outerWidth > 1000) {
                 setDesktopView(true)
+                setMiniDesktop(false)
+                setMobileMode(false)
             }
         }
 
