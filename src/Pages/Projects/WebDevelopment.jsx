@@ -3,7 +3,7 @@ import projectsList from '../../projects/projectList'
 // import github from '../images/github.svg';
 
 // import projectsList from '../project-data'
-import "./AProjects.css"
+import "./Aprojects.css"
 
 export default function webDevelopment() {
     console.log(projectsList)
