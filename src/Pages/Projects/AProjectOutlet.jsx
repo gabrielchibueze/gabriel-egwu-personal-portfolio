@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from 'react-router-dom'
-import "./AProjects.css"
+import "./Aprojects.css"
 export default function AProjectOutlet() {
     const [currentIndex, setCurrentIndex] = useState(1)
     const menuItems = [
