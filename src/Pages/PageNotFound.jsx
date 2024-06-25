@@ -1,11 +1,18 @@
-import React from "react";
-import { Link} from 'react-router-dom'
+import ButtonComponent from "../Components/buttonComponent/button";
 
 
-export default function PageNotFound () {
+export default function PageNotFound() {
     return (
-        <div>
-            <h1>This is the Page not found Error response</h1>
+        <div className="page-not-found">
+            <h1>Page not found. Please check if the page you are looking for is correct.</h1>
+            <ButtonComponent props={{
+                        type: "button",
+                        title: "Go to home page",
+                        link: "/",
+                        onClick:  null,
+                        mode: "raised",
+                        design: "raised"
+                    }}/>
         </div>
     )
 }

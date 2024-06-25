@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaEnvelope } from "react-icons/fa";
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { FaTwitter, FaLinkedinIn, FaFacebookF, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Sidebar (){
     return (

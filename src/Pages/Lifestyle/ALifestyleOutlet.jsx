@@ -1,15 +1,39 @@
-import React from "react";
-import { Link, Outlet} from 'react-router-dom'
+import { useState } from "react";
+import { Link, Outlet } from 'react-router-dom'
 
 export default function ALifestyleOutlet() {
+    const [currentIndex, setCurrentIndex] = useState(1)
+    const menuItems = [
+        {
+            link: ".",
+            name: "Art and Lifestyle"
+        },
+        {
+            link: "business&finance",
+            name: "Business and Finance"
+        },
+        {
+            link: "music&fashion",
+            name: "Music and Fashion"
+        },
+        {
+            link: "technology",
+            name: "Technology"
+        },
+        {
+            link: "travel&books",
+            name: "Travel and Books"
+        }
+    ]
+
+
     return (
         <div>
             <div className="lifestyle-outlet top-outlet">
-                <Link to=".">Art and Lifestyle</Link>
-                <Link to="business&finance">Business and Finance</Link>
-                <Link to="music&fashion">Music and Fashion</Link>
-                <Link to="technology">Technology</Link>
-                <Link to="travel&books">Travel and Books</Link>
+                {menuItems.map((item, index) => {
+                    return <Link onClick={() => setCurrentIndex(index + 1)} className={currentIndex === index + 1 ? "select-active" : null} key={item.link} to={item.link}>{item.name}</Link>
+
+                })}
             </div>
             <Outlet />
         </div>

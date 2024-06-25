@@ -1,0 +1,151 @@
+.layout-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0px;
+    gap: 3rem;
+}
+
+.projects__box {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid rgb(226, 233, 232);
+}
+
+
+.projects__links {
+    display: flex;
+    width: fit-content;
+    padding-right: 1rem;
+    background-color: cadetblue;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    background: #520288;
+    z-index: -5;
+    color: whitesmoke;
+    border-radius: 0.2rem;
+}
+
+.projects__links:hover {
+    box-shadow: -2px -2px 8px rgba(99, 94, 94, 0.842);
+}
+
+.projects__github-icon {
+    width: 28px;
+    color: black;
+    height: none;
+}
+
+.projects__github-icon:hover {
+    border-radius: 50%;
+    padding: none;
+    border: 1px solid rgb(14, 1, 1);
+}
+
+@media(min-width: 800px) {
+    .projects__box {
+        align-items: center;
+        flex-direction: row;
+        gap: 5%
+    }
+}
+
+@media(min-width: 1200px) {
+
+    .projects__description {
+
+        max-width: 45%;
+
+    }
+
+    .projects__image-box {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media(min-width: 800px) {
+    .projects__box {
+        gap: 2rem;
+    }
+
+    .projects__description {
+
+        max-width: 40%;
+
+    }
+
+    .projects__image-box {
+        width: 60%;
+        height: auto;
+    }
+}
+
+
+@keyframes linkText {
+    from {
+        left: 0px;
+        opacity: 0.5;
+    }
+
+    to {
+        right: 50px;
+        opacity: 1;
+    }
+}
+
+.projects__image {
+    width: 100%;
+    max-height: 400px;
+}
+
+@media(min-width: 800px) {
+
+
+    ;
+}
+
+
+
+.link__text {
+    position: relative;
+    display: inline-block;
+    padding: .6rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.link__text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background-color: rgba(90, 68, 131, 0.774);
+    height: 100%;
+    z-index: 1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.site-link {
+    background: transparent;
+    color: rgb(228, 221, 221);
+    font-weight: bold;
+    z-index: 3;
+}
+
+
+.link__text:hover::after,
+.link__text:focus:after {
+    right: 0;
+    /* background: pink; */
+}
+
+.link__text span {
+    padding-left: 1rem;
+    font-family: sans-serif;
+}

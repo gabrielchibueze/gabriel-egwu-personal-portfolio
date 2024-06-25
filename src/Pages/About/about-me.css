@@ -1,0 +1,52 @@
+.about-me__page {
+    /* padding: 0rem 2rem; */
+    line-height: 1.5;
+
+}
+
+.about-outlet>a {
+    font-weight: 550;
+}
+
+.select-active {
+    background-color: rgb(26, 20, 13);
+}
+
+.about-me__page>h1 {
+    margin: 0px;
+    margin-bottom: 1rem;
+}
+
+ol,
+ul {
+    padding-left: 1.8rem;
+    margin: 0 auto;
+}
+
+ul>li::marker {
+    background-color: blue;
+    color: blueviolet;
+    font-size: 1.5rem;
+
+}
+
+ol>li::marker {
+    font-size: 1rem;
+
+}
+
+
+
+@media(min-width: 800px) {
+    .about-me__page {
+        max-width: 70%;
+    }
+
+}
+
+
+p,
+li {
+    font-size: large;
+    text-align: justify;
+}

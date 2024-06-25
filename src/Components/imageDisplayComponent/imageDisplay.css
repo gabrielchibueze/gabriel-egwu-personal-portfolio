@@ -1,0 +1,50 @@
+.image-caption-helper{
+    /* display: none; */
+    margin-top: 1rem;
+    /* border: 5px solid grey; */
+    box-shadow: 3px 2px 5px rgb(173, 160, 185);
+    border-radius: 1rem;
+}
+
+.image-caption-helper>p {
+    padding: 1.5rem;
+}
+
+.welcome-image1 {
+    /* height: 200px; */
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+
+@media(min-width: 800px) {
+    .about-me__page {
+        max-width: 70%;
+    }
+
+    .image-caption-helper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding-right: 2rem;
+        margin-top: 1.5rem;
+        height: 220px;
+    }
+
+    .welcome-image1{
+        width: 40%;
+        height: 100%;
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+
+    }
+}
+
+@media(min-width: 1000px){
+    .welcome-image1 {
+        width: 50%;
+    }
+}

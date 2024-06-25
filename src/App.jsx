@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Route, Routes, BrowserRouter} from 'react-router-dom'
 import MainLayout from './Layouts/MainLayout'
 // About Components
@@ -39,34 +38,30 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainLayout />}>
-          <Route index element={<AboutGabriel/>} />
-          // About Components
-          <Route path='about' element={<AAboutOutlet/>}>
             <Route index element={<AboutGabriel/>} />
-            <Route path='business&investment' element={<BusinessAndInvestment/>} />
-            <Route path='education' element={<Education/>} />
-            <Route path='philantropy' element={<Philantropy/>} />
-          </Route>
-          // Gallery Components
-          <Route path='photogallery' element={<AGalleryOutlet/>}>
-            <Route index element={<Photos/>} />
-            <Route path='videos' element={<Videos/>} />
-          </Route>
-          // Lifestyle Components
-          <Route path='lifestyle' element={<ALifestyleOutlet/>}>
-            <Route index element={<ArtsAndLifestyle/>} />
-            <Route path='business&finance' element={<BusinessAndFinance/>} />
-            <Route path='music&fashion' element={<MusicAndFashion/>} />
-            <Route path='technology' element={<Technology/>} />
-            <Route path='travel&books' element={<TravelAndBooks/>} />
+            <Route path='about' element={<AAboutOutlet/>}>
+              <Route index element={<AboutGabriel/>} />
+              <Route path='business&investment' element={<BusinessAndInvestment/>} />
+              <Route path='education' element={<Education/>} />
+              <Route path='philantropy' element={<Philantropy/>} />
+            </Route>
+            <Route path='gallery' element={<AGalleryOutlet/>}>
+              <Route path="photos" element={<Photos/>} />
+              <Route path='videos' element={<Videos/>} />
+            </Route>
+            <Route path='lifestyle' element={<ALifestyleOutlet/>}>
+              <Route index element={<ArtsAndLifestyle/>} />
+              <Route path='business&finance' element={<BusinessAndFinance/>} />
+              <Route path='music&fashion' element={<MusicAndFashion/>} />
+              <Route path='technology' element={<Technology/>} />
+              <Route path='travel&books' element={<TravelAndBooks/>} />
 
-          </Route>
-          // Project Components
-          <Route path='projects' element={<AProjectOutlet/>}>
-            <Route path='engineering' element={<Engineering/>} />
-            <Route path='futureprojects' element={<FutureProjects/>} />
-            <Route path='webdevelopment' element={<WebDevelopment/>} />
-          </Route>
+            </Route>
+            <Route path='projects' element={<AProjectOutlet/>}>
+              <Route path='engineering' element={<Engineering/>} />
+              <Route path='futureprojects' element={<FutureProjects/>} />
+              <Route path='webdevelopment' element={<WebDevelopment/>} />
+            </Route>
 
             <Route path='businessprinciple&ethics' element={<BusinessPrincipleAndEthics />}/>            
             <Route path='contactme' element={<Contactme />}/>
